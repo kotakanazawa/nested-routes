@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todo.title %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %>
+|
+<%= link_to 'Delete', @todo, method: :delete, data: { confirm: 'Are you sure?' }  %>
+|
+<%= link_to 'Back', project_path(@todo.project_id) %>

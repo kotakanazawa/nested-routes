@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<% @project.todos.each do |todo| %>
+  <li>
+    <%= link_to todo.title, todo_path(todo) %>
+    |
+    <%= link_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure?' }  %>
+  </li>
+<% end %>
+<br>
+<%= link_to 'Create Todo', new_project_todo_path(@project) %>
+<br>
+<br>
+<%= link_to 'Edit project', edit_project_path(@project) %> |
+<%= link_to 'Back to projects', projects_path %>

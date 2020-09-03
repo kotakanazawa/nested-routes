@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<%= link_to 'Edit', edit_user_book_path(@book) %>
+
+<td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
